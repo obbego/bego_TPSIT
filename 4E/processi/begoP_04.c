@@ -10,7 +10,7 @@ int status;
 int main(int argc, char *argv[])
 {
     p = fork();
-
+    
     if (p==0) // se p = 0 è il figlio
     {
         printf("1_Sono il Figlio: PID mio = %d\n", getpid());
