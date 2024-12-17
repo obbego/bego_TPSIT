@@ -24,13 +24,13 @@ int main(int argc, char *argv[])
         printf("4_Sono il Padre: PID di mio figlio = %d\n", p);
 
         printf("Attendo che mio Figlio: termini\n", wait(&status));
-        printf("Il codice di terminazione di mio figlio: WEXITSTATUS(status) = %d", WEXITSTATUS(status));
+        printf("Il codice di terminazione di mio figlio: WEXITSTATUS(status) = %d\n", WEXITSTATUS(status));
         //restituisce il codice di uscita del figlio
 
         printf("Attendo che mio Figlio(gia terminato): termini\n", wait(&status));
         //ritorna -1 perche non ci sono figli
 
-        printf("\nSono il Padre: %d e il PID di mio figlio(gia terminato): %d", getpid(), p);
+        printf("\nSono il Padre: %d e il PID di mio figlio(gia terminato): %d\n", getpid(), p);
         printf("\nVedo ancora il suo codice d'uscita: %d\n\n", WEXITSTATUS(status));
         
     }
