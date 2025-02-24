@@ -39,9 +39,9 @@ int main(int argc, char *argv[])
         }
         else
         {
-            printf("ERRORE NELLA GENERAZIONE DEL PROCESSO figlio p2");
+            printf("\nERRORE NELLA GENERAZIONE DEL PROCESSO figlio p2");
         }
     }
     else
-        printf("ERRORE NELLA GENERAZIONE DEL PROCESSO figlio p1");
+        printf("\nERRORE NELLA GENERAZIONE DEL PROCESSO figlio p1");
 }
