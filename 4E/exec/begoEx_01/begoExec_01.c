@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
         exit(1);
     }
 
-    execl("/usr/bin/cat","cat", argv[1], NULL);
+    execl("/usr/bin/cat", "cat", argv[1], NULL);
 
     printf("Exec ha terminato con errori\n");
     return -1;

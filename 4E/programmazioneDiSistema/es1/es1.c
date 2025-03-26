@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
     
     pid1 = fork(); //creo un 1 figlio per eseguire il primo comando (cat)
 
-    if (pid1 == 0) //figlio
+    if (pid1 == 0) //figlio 1
     {
         close(p0p1[0]); //chiudo lettura perche devo scrivre nella pipe
         close(1); //chiudo il fd 1, che è lo stdout
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 
     pid2 = fork(); //creo un 2 figlio per eseguire il more
 
-    if (pid2 == 0)
+    if (pid2 == 0) //figlio 2
     {
         close(p0p1[1]); //chiudo scrittura perche devo solo leggere dalla pipe
         close(0); //chiudo lo stdin (tastiera)
