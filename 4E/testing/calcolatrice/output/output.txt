@@ -1,0 +1,18 @@
+bego@bego-VirtualBox:~/Desktop/bego_TPSIT/4E/testing/calcolatrice/build$ ./test_calcolatrice
+Running main() from /home/bego/googletest/googletest/src/gtest_main.cc
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from CalcolatriceTest
+[ RUN      ] CalcolatriceTest.Somma
+[       OK ] CalcolatriceTest.Somma (0 ms)
+[ RUN      ] CalcolatriceTest.DivisioneByZero
+Errore: divisione per zero!
+[       OK ] CalcolatriceTest.DivisioneByZero (0 ms)
+[ RUN      ] CalcolatriceTest.RadiceNegativa
+Errore: radice quadrata di numero negativo!
+[       OK ] CalcolatriceTest.RadiceNegativa (0 ms)
+[----------] 3 tests from CalcolatriceTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 3 tests.

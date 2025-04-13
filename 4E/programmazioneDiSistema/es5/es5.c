@@ -75,7 +75,7 @@ int main(int argc, char *argv[])
 
             wait(NULL);
             close(p1p0[1]);
-
+            
             read(p1p0[0], &buff, sizeof(buff));
             printf("Il cliente %s ha %d fatture da pagare\n\n", stringa, atoi(buff));
             nRichieste += atoi(buff);

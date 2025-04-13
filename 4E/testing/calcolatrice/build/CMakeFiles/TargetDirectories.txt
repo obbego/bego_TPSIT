@@ -1,0 +1,4 @@
+/home/bego/Desktop/bego_TPSIT/4E/testing/calcolatrice/build/CMakeFiles/test_calcolatrice.dir
+/home/bego/Desktop/bego_TPSIT/4E/testing/calcolatrice/build/CMakeFiles/test.dir
+/home/bego/Desktop/bego_TPSIT/4E/testing/calcolatrice/build/CMakeFiles/edit_cache.dir
+/home/bego/Desktop/bego_TPSIT/4E/testing/calcolatrice/build/CMakeFiles/rebuild_cache.dir

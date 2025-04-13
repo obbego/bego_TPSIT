@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
         printf("Inserisci stringa da cercare\n'fine' per terminare\n");
         scanf("%s", stringa);
 
-        if (strcmp(stringa, "fine") == 0)
+        if (strcmp(stringa, "fine") == 0) //padre = p0
         {
             close(p1p0[0]);
             close(p1p0[1]);
@@ -55,11 +55,11 @@ int main(int argc, char *argv[])
         {
             pid = fork();
 
-            if (pid == 0) // figlio
+            if (pid == 0) // figlio = p1
             {
-                close(p1p0[0]);
-                close(1);
-                dup(p1p0[1]);
+                close(p1p0[0]); 
+                close(1); 
+                dup(p1p0[1]); 
                 close(p1p0[1]);
 
                 execl("/usr/bin/grep", "grep", "-c", stringa, argv[1], (char *)0);

@@ -55,16 +55,13 @@ int main(int argc, char *argv[])
     //scrittura su file
     fdFile = open("wc.txt", O_WRONLY | O_CREAT, 0777);
 
-    while ((nread = read(p2p0[0], &buff, 1)) > 0)
+    while ((nread = read(p2p0[0], &buff, sizeof(buff))) > 0)
     {
         write(fdFile, &buff, nread);
     }
 
-    wait(&pid1); //aspetto i 2 processi
-    
     close(fdFile);
     close(p2p0[0]);
-    
-    
+
     return 0; //fine del padre
 }

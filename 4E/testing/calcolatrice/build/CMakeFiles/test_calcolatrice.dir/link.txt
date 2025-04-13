@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test_calcolatrice.dir/src/calcolatrice.c.o CMakeFiles/test_calcolatrice.dir/test/test_calcolatrice.cpp.o -o test_calcolatrice  -lpthread /usr/local/lib/libgtest_main.a /usr/local/lib/libgtest.a 
