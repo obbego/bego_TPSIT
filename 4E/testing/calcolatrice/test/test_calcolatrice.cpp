@@ -15,5 +15,3 @@ TEST(CalcolatriceTest, DivisioneByZero) {
 TEST(CalcolatriceTest, RadiceNegativa) {
     EXPECT_DOUBLE_EQ(radice(-9.0), 0.0);  // gestione errore
 }
-
-// Aggiungi altri test come vuoi!
