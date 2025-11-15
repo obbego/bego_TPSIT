@@ -20,7 +20,7 @@ int main(){
     servizio.sin_addr.s_addr = htonl(INADDR_ANY); 
     servizio.sin_port = htons(Serverport);
 
-    char stringa[20];
+    char stringa[40];
     int socketfd, soa, fromlen = sizeof(servizio);
 
     socketfd = socket(AF_INET, SOCK_STREAM, 0);
