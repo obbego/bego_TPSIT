@@ -30,46 +30,6 @@ void infoPersona(Persona p) {
     printf("Nome: %s, Cognome: %s, Eta: %d, CodiceFiscale: %s, AnnoNascita: %d, Citta: %s, Reddito: %f\n", p.nome, p.cognome, p.eta, p.codiceFiscale, p.annoNascita, p.residenza, p.redditoAnnuo);
 }
 
-int presenzaCitta(char elenco[][20], int dimElenco, char citta[]) {
-    for (int i = 0; i < dimElenco; i++) {
-        if (strcmp(elenco[i], citta) == 0) {
-            return 0; // già presente
-        }
-    }
-    return 1; // non trovata
-}
-
-void elencoPerCitta(Persona persone[], int dim) {
-    char elenco[20][dim];
-    int k = 0;
-    int nPersone = 0;
-    double etaPersone = 0;
-
-    for (int i = 0; i < dim; i++) {
-        if (presenzaCitta(elenco, k, persone[i].residenza) == 1) {
-            strcpy(elenco[k], persone[i].residenza);
-            printf("\nCittà: %s\n", elenco[k]);
-
-            for (int j = 0; j < dim; j++) {
-                if (strcmp(persone[j].residenza, elenco[k]) == 0) {
-                    infoPersona(persone[j]);
-                    nPersone++;
-                    etaPersone = etaPersone + persone[j].eta;
-                }
-            }
-            
-            printf("\nNella città: %s\n", elenco[k]);
-            printf("Il numero di persone è: %d\n", nPersone);
-            etaPersone = etaPersone / nPersone;
-            printf("L'età media delle persone è: %.2f\n", etaPersone);
-            
-            k++;
-            nPersone = 0;
-            etaPersone = 0;
-        }
-    }
-}
-
 int trovaRedditoMin(Persona persone[], int dim){
     int indiceRedMin = 0;
     for(int i = 0; i < dim; i++){
@@ -163,7 +123,7 @@ int main(){
         {"Luca", "Verdi", 45, "VRDLCA78C12F205X", 35000, 1978, "Venezia"},
         {"Giulia", "Rossi", 30, "RSSGLI94E22H501Z", 27000, 1994, "Vicenza"},
         {"Marco", "Neri", 55, "NRIMRC69B15H501Y", 42000, 1969, "Treviso"},
-        {"Sara", "Gallo", 19, "GLLSRA05D44H501V", 15000, 2005, "Grignano"},
+        {"Sara", "Gallo", 19, "GLLSRA05D44H501V", 15000, 2005, "Padova"},
         {"Alessandro", "Fontana", 28, "FNTLSS96H12H501T", 32000, 1996, "Rovigo"},
         {"Elena", "Ferrari", 33, "FRRLNE91C22H501S", 29000, 1991, "Venezia"},
         {"Matteo", "Costa", 40, "CSTMTT84A01H501R", 37000, 1984, "Vicenza"},
@@ -181,6 +141,7 @@ int main(){
     };
 
     int dim = sizeof(persone) / sizeof(persone[0]);
+
 
     printf("Persona con reddito Minore: \n");
     infoPersona(persone[trovaRedditoMin(persone, dim)]);
@@ -215,8 +176,6 @@ int main(){
     printf("Inserisci anno per ricerca: \n");
     scanf("%d", &anno_ricerca);
     cercaAnno(persone, dim, anno_ricerca);
-    
-    elencoPerCitta(persone, dim);
 
     return 0;
 }
