@@ -7,6 +7,7 @@
 #include <errno.h>       //gestioni errori connessione
 #include <ctype.h>       //bind
 #include <unistd.h>     // file header che consente l'accesso alle API dello standard POSIX
+#include <arpa/inet.h> 
 
 #define Serverport 1450
 
@@ -19,6 +20,7 @@ int main(){
     servizio.sin_family = AF_INET;
     servizio.sin_addr.s_addr=htonl(INADDR_ANY); //htnol converte indirizzo in bit
     servizio.sin_port = htons(Serverport);
+    //servizio.sin_addr.s_addr = inet_addr("192.168.60.155"); //IP server
 
     char stringa[20];
     int socketfd; //socket file descriptor -> contiene dei valori/prametri
